@@ -179,3 +179,13 @@ function mostrarShop() {
 function ocultarShop() {
   shopOcultas.style.display = "none";
 }
+
+const nosotrosOculto = document.querySelector("#carouselExampleCaptions");
+
+function mostrarSobreNosotros() {
+  nosotrosOculto.style.display = "block";
+}
+
+function ocultarSobreNosotros() {
+  nosotrosOculto.style.display = "none";
+}

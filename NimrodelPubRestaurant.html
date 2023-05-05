@@ -66,12 +66,14 @@
                   <a
                     class="nav-link active"
                     aria-current="page"
-                    href=".grupo-tarjetas"
+                    href="#nuestrosProductos"
                     >Nuestros Productos</a
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Sobre Nosotros</a>
+                  <a class="nav-link" onclick="mostrarSobreNosotros()" href="#"
+                    >Sobre Nosotros</a
+                  >
                 </li>
                 <li class="nav-item" onclick="mostrarComuniquemonos()">
                   <a class="nav-link" href="#comuniquemonos">Comuniquemonos</a>
@@ -100,8 +102,8 @@
 
         <div class="listisha">
           <ul>
-            <li>Nuestros Productos</li>
-            <li>Sobre Nosotros</li>
+            <li><a href="#nuestrosProductos"></a>Nuestros Productos</li>
+            <li onclick="mostrarSobreNosotros()">Sobre Nosotros</li>
             <li><a href="#comuniquemonos">Comuniquemonos</a></li>
             <li><a href="#reserva">Reserva</a></li>
           </ul>
@@ -122,6 +124,104 @@
             </ul>
         </nav>
     --></header>
+
+    <div
+      id="carouselExampleCaptions"
+      class="carousel slide col-6 position-fixed z-1"
+      style="
+        display: none;
+        text-align: center;
+        margin: -5% 25% -5% 25%;
+        background-color: black;
+        padding: 2%;
+      "
+    >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./Assets/img/IMG2.jpg" class="d-block w-100" alt="..." />
+          <div class="carousel-caption d-none d-md-block" style="color:white; -webkit-text-stroke: 0.3px rgb(50, 241, 53);">
+            <h3>Nimrodel Pub Restaurant</h3>
+            <p>
+              Nimrodel Significa “dama de la cueva blanca”. Fue una elfa silvana
+              que vivió durante la Tercera Edad del Sol en el bosque de
+              Lothlórien. En honor a su nombre, se acuña Nimrodel al río que
+              nace en las Montañas Nubladas.
+            </p>
+            <h5 onclick="ocultarSobreNosotros()">CERRAR</h5>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="carousel-caption d-none d-md-block">
+            <h3>Nimrodel Pub Restaurant</h3>
+            <p>
+              Nimrodel Pub Restaurant es un oasis de calma y diversión, lleno de
+              rincones acogedores en donde se resalta la belleza de su
+              decoración élfica. Es un lugar ideal para visitar solo o
+              acompañado, disfrutar una tarde con amigos, terminar el día
+              después del trabajo o almorzar con tu familia. Puedes probar
+              nuestras tradicionales tablas, en todas sus variedades y que nos
+              han otorgado reconocimiento dentro de la cultura gastronómica.
+              También puedes disfrutar nuestras cervezas de fabricación propia,
+              con sabores que te llevarán a un mágico mundo.
+            </p>
+            <h5 onclick="ocultarSobreNosotros()">CERRAR</h5>
+          </div>
+        <div> <img
+            src="./Assets/img/Color_negro.jpg "
+            class="d-block w-100"
+            alt="..."
+          /></div> 
+        </div>
+        <div class="carousel-item">
+          <div class="carousel-caption d-none d-md-block">
+            <h3">Nimrodel Pub Restaurant</h3>
+            <p></p>
+            <h5 onclick="ocultarSobreNosotros()">CERRAR</h5>
+          </div>
+          <img src="./Assets/img/IMG1.jpg" class="d-block w-100" alt="..." />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
 
     <div
       id="modalBebidas"
@@ -219,9 +319,9 @@
     <section>
       <h1>Nimrodel Pub Restaurant</h1>
 
-      <h2>Destacados de la semana</h2>
+      <h2 id="nuestrosProductos">Destacados de la semana</h2>
 
-      <div class="grupo-tarjetas">
+      <div id="grupoTarjetas" class="grupo-tarjetas">
         <div class="tarjeta" onclick="mostrarBebidas()">
           <img
             src="./Assets/img/bebidas.jpg"
